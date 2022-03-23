@@ -8,7 +8,7 @@
     align-items: center;
     z-index:99;
     justify-content: unset;
-  }
+}
   
   
   
@@ -75,3 +75,5 @@
   .searchBarWrapper.active input::placeholder{
     color: #0f0f0f;
   } 
+
+

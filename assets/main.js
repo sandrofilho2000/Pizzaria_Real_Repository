@@ -1,6 +1,8 @@
 const handleBairros = (e) =>{
     var bairrosOverlay = document.querySelector(".bairros_overlay")
+    var img = document.querySelector(".searchBarIcon img")
     bairrosOverlay.classList.contains("active") ? bairrosOverlay.classList.remove("active") : bairrosOverlay.classList.add("active")
+    bairrosOverlay.classList.contains("active") ? img.setAttribute("src", "assets/images/CloseSearch.svg") : img.setAttribute("src", "assets/images/SearchIcon.svg") 
 }
 
 const preventingDefault = (e) =>{
