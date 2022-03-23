@@ -1,0 +1,1396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/cardapio.css">
+    <link rel="stylesheet" href="assets/bairros.css">
+    <link rel="stylesheet" href="assets/searchBar.css">
+    <title>Pizzaria Real</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="searchBarWrapper">
+            <div onclick="handleSearchIcon()" class="searchBarIcon"><img src="assets/images/SearchIcon.19debe1437503f0b71ed4ec7ecf5f546.svg" alt="">
+            </div><input type="text" onchange="handleSearch(this)" onkeyup="handleSearch(this)" placeholder="Pesquise por sabor ou ingrediente...">
+        </div>
+        <div onclick="handleBairros()" class="openBairros"><img src="assets/images/deliveryIcon.ba84d5bba7a20db015d898d4216e2ac0.svg"></div>
+        <div class="cardapio_wrapper">
+            <div class="cardapio_container">
+                <div class="logo_container"><img src="assets/images/logo_bgremover.42665a4ddb8ceccdb80a.png"
+                        class="img_logo"></div>
+                <table>
+                    <h2>Pizzas</h2>
+                    <th></th>
+                    <th>23 cm - 4 Fatias</th>
+                    <th>28 cm - 6 Fatias</th>
+                    <th>33 cm - 8 Fatias</th>
+                    <tr>
+                        <td>Real<p class="td_p_components">Molho, mussarela, provolone fatiado, bacon, calabresa,
+                                presunto, catupiry, palmito, milho, ervilha, azeitona e orégano</p>
+                        </td>
+                        <td>R$ 49,00</td>
+                        <td>R$ 56,00</td>
+                        <td>R$ 63,00</td>
+                    </tr>
+                    <tr>
+                        <td>Hot Dog<p class="td_p_components">Molho, mussarela, salsicha, tomate, cebola, pimentão,
+                                bacon, milho, uva passa, batata palha, parmesão, azeitona e orégano</p>
+                        </td>
+                        <td>R$ 49,00</td>
+                        <td>R$ 56,00</td>
+                        <td>R$ 63,00</td>
+                    </tr>
+                    <tr>
+                        <td>5 Queijos<p class="td_p_components">Molho, mussarela, gorgonzola, provolone parmesão,
+                                catupiry, azeitona e orégano</p>
+                        </td>
+                        <td>R$ 49,00</td>
+                        <td>R$ 56,00</td>
+                        <td>R$ 63,00</td>
+                    </tr>
+                    <tr>
+                        <td>Portuguesa<p class="td_p_components">Molho, mussarela, presunto, bacon, pimentão, cebola,
+                                ovo, azeitona preta e orégano</p>
+                        </td>
+                        <td>R$ 49,00</td>
+                        <td>R$ 56,00</td>
+                        <td>R$ 63,00</td>
+                    </tr>
+                    <tr>
+                        <td>Brasileira<p class="td_p_components">Molho, mussarela, presunto, bacon, catupiry, palmito,
+                                milho, ervilha, azeitona e orégano</p>
+                        </td>
+                        <td>R$ 49,00</td>
+                        <td>R$ 56,00</td>
+                        <td>R$ 63,00</td>
+                    </tr>
+                    <tr>
+                        <td>Bacalhau<p class="td_p_components">Molho, mussarela, bacalhau cebola, pimentão, azeitona
+                                preta e orégano</p>
+                        </td>
+                        <td>R$ 49,00</td>
+                        <td>R$ 56,00</td>
+                        <td>R$ 63,00</td>
+                    </tr>
+                    <tr>
+                        <td>Diamante<p class="td_p_components">Molho, mussarela, champignon, bacon, salsinha, azeitona e
+                                orégano</p>
+                        </td>
+                        <td>R$ 49,00</td>
+                        <td>R$ 56,00</td>
+                        <td>R$ 63,00</td>
+                    </tr>
+                    <tr>
+                        <td>Colonial<p class="td_p_components">Molho, mussarela, tomate seco, rúcula, azeitona e orégano
+                            </p>
+                        </td>
+                        <td>R$ 49,00</td>
+                        <td>R$ 56,00</td>
+                        <td>R$ 63,00</td>
+                    </tr>
+                    <tr>
+                        <td>Pepperoni<p class="td_p_components">Molho, mussarela, pepperoni, cebola, azeitona e orégano
+                            </p>
+                        </td>
+                        <td>R$ 49,00</td>
+                        <td>R$ 56,00</td>
+                        <td>R$ 63,00</td>
+                    </tr>
+                    <tr>
+                        <td>Mexicana<p class="td_p_components">Molho, mussarela, tomate, cebola, bacon, calabresa,
+                                pimenta calabresa, azeitona e orégano</p>
+                        </td>
+                        <td>R$ 46,00</td>
+                        <td>R$ 54,00</td>
+                        <td>R$ 60,00</td>
+                    </tr>
+                    <tr>
+                        <td>Vegetariana<p class="td_p_components">Molho, mussarela, molho de espinafre, pimentão,
+                                parmesão, palmito, milho, azeitona e orégano</p>
+                        </td>
+                        <td>R$ 46,00</td>
+                        <td>R$ 54,00</td>
+                        <td>R$ 60,00</td>
+                    </tr>
+                    <tr>
+                        <td>Natureza<p class="td_p_components">Molho, mussarela, brócolis, alho frito, peito de peru,
+                                azeitona e orégano</p>
+                        </td>
+                        <td>R$ 46,00</td>
+                        <td>R$ 54,00</td>
+                        <td>R$ 60,00</td>
+                    </tr>
+                    <tr>
+                        <td>Minas Gerais<p class="td_p_components">Molho, mussarela, queijo Minas padrão, bacon,
+                                calabresa, cebola, azeitona e orégano</p>
+                        </td>
+                        <td>R$ 46,00</td>
+                        <td>R$ 54,00</td>
+                        <td>R$ 60,00</td>
+                    </tr>
+                    <tr>
+                        <td>Levíssima<p class="td_p_components">Molho, mussarela, tomate, cebola, palmito, parmesão,
+                                azeitona e orégano</p>
+                        </td>
+                        <td>R$ 46,00</td>
+                        <td>R$ 54,00</td>
+                        <td>R$ 60,00</td>
+                    </tr>
+                    <tr>
+                        <td>Vila Rica<p class="td_p_components">Molho, mussarela, frango desfiado, calabresa, cebola,
+                                azeitona e orégano</p>
+                        </td>
+                        <td>R$ 46,00</td>
+                        <td>R$ 54,00</td>
+                        <td>R$ 60,00</td>
+                    </tr>
+                    <tr>
+                        <td>Maria Fumaça<p class="td_p_components">Molho, mussarela, ricota, calabresa, azeitona preta e
+                                orégano</p>
+                        </td>
+                        <td>R$ 46,00</td>
+                        <td>R$ 54,00</td>
+                        <td>R$ 60,00</td>
+                    </tr>
+                    <tr>
+                        <td>4 Queijos<p class="td_p_components">Molho, mussarela, provolone, parmesão, catupiry,
+                                azeitona e orégano</p>
+                        </td>
+                        <td>R$ 46,00</td>
+                        <td>R$ 54,00</td>
+                        <td>R$ 60,00</td>
+                    </tr>
+                    <tr>
+                        <td>Peito de Peru<p class="td_p_components">Molho, mussarela, peito de peru, cebola, catupiry,
+                                azeitona e orégano</p>
+                        </td>
+                        <td>R$ 46,00</td>
+                        <td>R$ 54,00</td>
+                        <td>R$ 60,00</td>
+                    </tr>
+                    <tr>
+                        <td>Calabresa<p class="td_p_components">Molho, mussarela, calabresa, cebola, azeitona e orégano
+                            </p>
+                        </td>
+                        <td>R$ 46,00</td>
+                        <td>R$ 54,00</td>
+                        <td>R$ 60,00</td>
+                    </tr>
+                    <tr>
+                        <td>Frango com Cheddar<p class="td_p_components">Molho, mussarela, frango, cheddar, bacon,
+                                azeitona e orégano</p>
+                        </td>
+                        <td>R$ 46,00</td>
+                        <td>R$ 54,00</td>
+                        <td>R$ 60,00</td>
+                    </tr>
+                    <tr>
+                        <td>Imperador<p class="td_p_components">Molho, mussarela, atum, bacon, cebola, azeitona e
+                                orégano</p>
+                        </td>
+                        <td>R$ 46,00</td>
+                        <td>R$ 54,00</td>
+                        <td>R$ 60,00</td>
+                    </tr>
+                    <tr>
+                        <td>Canadense<p class="td_p_components">Molho, mussarela, lombo canadense, azeitona e orégano
+                            </p>
+                        </td>
+                        <td>R$ 46,00</td>
+                        <td>R$ 54,00</td>
+                        <td>R$ 60,00</td>
+                    </tr>
+                    <tr>
+                        <td>Frango com Catupiry<p class="td_p_components">Molho, mussarela, frango, catupiry, azeitona e
+                                orégano</p>
+                        </td>
+                        <td>R$ 46,00</td>
+                        <td>R$ 54,00</td>
+                        <td>R$ 60,00</td>
+                    </tr>
+                    <tr>
+                        <td>Atum<p class="td_p_components">Molho, mussarela, atum, ovo, cebola, azeitona e orégano</p>
+                        </td>
+                        <td>R$ 46,00</td>
+                        <td>R$ 54,00</td>
+                        <td>R$ 60,00</td>
+                    </tr>
+                    <tr>
+                        <td>Tropical<p class="td_p_components">Molho, mussarela, abacaxi e presunto</p>
+                        </td>
+                        <td>R$ 46,00</td>
+                        <td>R$ 54,00</td>
+                        <td>R$ 60,00</td>
+                    </tr>
+                    <tr>
+                        <td>Palmito<p class="td_p_components">Molho, mussarela, palmito, azeitona e orégano</p>
+                        </td>
+                        <td>R$ 46,00</td>
+                        <td>R$ 54,00</td>
+                        <td>R$ 60,00</td>
+                    </tr>
+                    <tr>
+                        <td>Bacon<p class="td_p_components">Molho, mussarela, bacon, azeitona e orégano</p>
+                        </td>
+                        <td>R$ 46,00</td>
+                        <td>R$ 50,00</td>
+                        <td>R$ 60,00</td>
+                    </tr>
+                    <tr>
+                        <td>Romeu e Julieta<p class="td_p_components">Mussarela, goiabada e queijo Minas padrão</p>
+                        </td>
+                        <td>R$ 46,00</td>
+                        <td>R$ 54,00</td>
+                        <td>R$ 60,00</td>
+                    </tr>
+                    <tr>
+                        <td>Banana<p class="td_p_components">Mussarela, banana, canela e açúcar</p>
+                        </td>
+                        <td>R$ 46,00</td>
+                        <td>R$ 54,00</td>
+                        <td>R$ 60,00</td>
+                    </tr>
+                    <tr>
+                        <td>Ecológica<p class="td_p_components">Molho, mussarela, rúcula, alho frito, pimentão, ervilha,
+                                azeitona e orégano</p>
+                        </td>
+                        <td>R$ 44,00</td>
+                        <td>R$ 52,00</td>
+                        <td>R$ 57,00</td>
+                    </tr>
+                    <tr>
+                        <td>Marguerita<p class="td_p_components">Molho, mussarela, tomate, manjericão fresco e
+                                desidratado, azeitona e orégano</p>
+                        </td>
+                        <td>R$ 44,00</td>
+                        <td>R$ 52,00</td>
+                        <td>R$ 57,00</td>
+                    </tr>
+                    <tr>
+                        <td>Napolitana<p class="td_p_components">Molho, mussarela, tomate, parmesão, azeitona e orégano
+                            </p>
+                        </td>
+                        <td>R$ 44,00</td>
+                        <td>R$ 52,00</td>
+                        <td>R$ 57,00</td>
+                    </tr>
+                    <tr>
+                        <td>Presunto<p class="td_p_components">Molho, mussarela, presunto, azeitona e orégano</p>
+                        </td>
+                        <td>R$ 44,00</td>
+                        <td>R$ 52,00</td>
+                        <td>R$ 57,00</td>
+                    </tr>
+                    <tr>
+                        <td>Alho<p class="td_p_components">Molho, mussarela, alho frito, tomate, azeitona e orégano</p>
+                        </td>
+                        <td>R$ 44,00</td>
+                        <td>R$ 52,00</td>
+                        <td>R$ 57,00</td>
+                    </tr>
+                    <tr>
+                        <td>Mussarela<p class="td_p_components">Molho, mussarela, tomate, azeitona e orégano</p>
+                        </td>
+                        <td>R$ 44,00</td>
+                        <td>R$ 52,00</td>
+                        <td>R$ 57,00</td>
+                    </tr>
+                    <tr>
+                        <td>Catupiry<p class="td_p_components">Molho, mussarela, catupiry, azeitona e orégano</p>
+                        </td>
+                        <td>R$ 44,00</td>
+                        <td>R$ 52,00</td>
+                        <td>R$ 57,00</td>
+                    </tr>
+                    <tr>
+                        <td>Aliche<p class="td_p_components">Molho, mussarela, tomate, aliche, azeitona e orégano</p>
+                        </td>
+                        <td>R$ 49,00</td>
+                        <td>R$ 56,00</td>
+                        <td>R$ 63,00</td>
+                    </tr>
+                    <tr>
+                        <td>Majestade<p class="td_p_components">Molho, mussarela, filé mignon, gorgonzola, azeitona e
+                                orégano</p>
+                        </td>
+                        <td>R$ 49,00</td>
+                        <td>R$ 56,00</td>
+                        <td>R$ 63,00</td>
+                    </tr>
+                    <tr>
+                        <td>Carne Seca<p class="td_p_components">Molho, mussarela, carne seca, cebola, catupiry e
+                                orégano</p>
+                        </td>
+                        <td>R$ 49,00</td>
+                        <td>R$ 56,00</td>
+                        <td>R$ 63,00</td>
+                    </tr>
+                    <tr>
+                        <td>Parma<p class="td_p_components">Molho, mussarela, presunto de Parma, queijo bolinha, geléia
+                                de pimenta agridoce, pimenta biquinho e orégano</p>
+                        </td>
+                        <td>R$ 49,00</td>
+                        <td>R$ 56,00</td>
+                        <td>R$ 63,00</td>
+                    </tr>
+                    <tr>
+                        <td>Filé Madeira<p class="td_p_components">Molho, mussarela, filé mignon, cebola, molho madeira,
+                                azeitona e orégano</p>
+                        </td>
+                        <td>R$ 49,00</td>
+                        <td>R$ 56,00</td>
+                        <td>R$ 63,00</td>
+                    </tr>
+                    <tr>
+                        <td>Funghi<p class="td_p_components">Molho, mussarela, funghi Secchi, parmesão, alecrim, tomate
+                                grape e azeitona</p>
+                        </td>
+                        <td>R$ 49,00</td>
+                        <td>R$ 56,00</td>
+                        <td>R$ 63,00</td>
+                    </tr>
+                    <tr>
+                        <td>Isca de Soja<p class="td_p_components">Molho, Mussarela, soja em tiras, gorgonzola, azeitona
+                                e orégano.</p>
+                        </td>
+                        <td>R$ 49,00</td>
+                        <td>R$ 56,00</td>
+                        <td>R$ 63,00</td>
+                    </tr>
+                    <tr>
+                        <td>Isca de Soja<p class="td_p_components">Molho, mussarela, isca de soja, gorgonzola, azeitona
+                                e orégano.</p>
+                        </td>
+                        <td>R$ 49,00</td>
+                        <td>R$ 56,00</td>
+                        <td>R$ 63,00</td>
+                    </tr>
+                    <tr>
+                        <td>Canastra<p class="td_p_components">Molho, mussarela, carne seca, queijo canastra, alho poro,
+                                azeitona e orégano</p>
+                        </td>
+                        <td>R$ 49,00</td>
+                        <td>R$ 56,00</td>
+                        <td>R$ 63,00</td>
+                    </tr>
+                    <tr>
+                        <td>Champignon Com Alho Poró<p class="td_p_components">Molho,mussarela,champignon,alho
+                                poró,queijo minas padrão,tomate grape,azeitona e orégano</p>
+                        </td>
+                        <td>R$ 49,00</td>
+                        <td>R$ 56,00</td>
+                        <td>R$ 63,00</td>
+                    </tr>
+                    <tr>
+                        <td>Pêra Com Gorgonzola<p class="td_p_components">Molho,mussarela,gorgonzola,pera caramelizada e
+                                orégano</p>
+                        </td>
+                        <td>R$ 49,00</td>
+                        <td>R$ 56,00</td>
+                        <td>R$ 63,00</td>
+                    </tr>
+                    <tr>
+                        <td>Anita Garibaldi<p class="td_p_components">Mussarela, gorgonzola, goiabada e orégano.</p>
+                        </td>
+                        <td>R$ 49,00</td>
+                        <td>R$ 56,00</td>
+                        <td>R$ 63,00</td>
+                    </tr>
+                    <tr>
+                        <td>Shiitake<p class="td_p_components">Molho,mussarela,parmesão,alho laminado,shiitake
+                                refogado,azeitonas pretas e orégano</p>
+                        </td>
+                        <td>R$ 49,00</td>
+                        <td>R$ 56,00</td>
+                        <td>R$ 63,00</td>
+                    </tr>
+                    <tr>
+                        <td>Filé Ao Alho<p class="td_p_components">Molho,mussarela,filé mignon,alho laminado,azeitona e
+                                orégano</p>
+                        </td>
+                        <td>R$ 49,00</td>
+                        <td>R$ 56,00</td>
+                        <td>R$ 63,00</td>
+                    </tr>
+                    <tr>
+                        <td>Shimeji<p class="td_p_components">Molho,mussarela,shimeji refogado,geléia de cebola
+                                caramelizada,azeitona preta e orégano</p>
+                        </td>
+                        <td>R$ 49,00</td>
+                        <td>R$ 56,00</td>
+                        <td>R$ 63,00</td>
+                    </tr>
+                    <tr>
+                        <td>Filé Suíno<p class="td_p_components">Molho,mussarela,cheddar fatiado,filé mignon suíno
+                                defumado,cebola,azeitonas pretas e orégano</p>
+                        </td>
+                        <td>R$ 49,00</td>
+                        <td>R$ 56,00</td>
+                        <td>R$ 63,00</td>
+                    </tr>
+                </table>
+                <table>
+                    <h2>PÃO FUNCIONAL LOW CARB</h2>
+                    <th></th>
+                    <th>APROX 80 G</th>
+                    <th>DUAS UNID DE 80 G</th>
+                    <th>APROX 230 G</th>
+                    <th>APROX 60 G</th>
+                    <tr>
+                        <td>PÃO AUSTRALIANO LOW CARB DE HAMBURGUER<p class="td_p_components">Farinha de castanha de
+                                caju, ovo, farinha de linhaça, sal, psyllium, goma xantana, mel orgânico para
+                                fermentação (grande parte consumido pela fermentação longa) e levain (fermento natural)
+                                . Fermentação lenta ( 24horas) e natural.</p>
+                        </td>
+                        <td>R$ 6,50</td>
+                        <td>R$ 12,00</td>
+                        <td>---</td>
+                        <td>---</td>
+                    </tr>
+                    <tr>
+                        <td>PÃO DE HAMBURGUER LOW CARB<p class="td_p_components">Farinha de castanha de caju, ovo,
+                                farinha de linhaça, sal, psyllium, goma xantana, açúcar demerara orgânico para
+                                fermentação (grande parte consumido pelo processo de fermentação) e levain (fermento
+                                natural) . Fermentação lenta ( 24horas) e natural. Pão Francês LOWCARB</p>
+                        </td>
+                        <td>R$ 6,50</td>
+                        <td>R$ 12,00</td>
+                        <td>---</td>
+                        <td>---</td>
+                    </tr>
+                    <tr>
+                        <td>PÃO FRANCÊS LOWCARB<p class="td_p_components">Farinha de castanha de caju, ovo, farinha de
+                                linhaça, sal, psyllium, goma xantana, açúcar demerara orgânico para fermentação e levain
+                                (fermento natural) . Fermentação lenta ( 24horas) e natural.</p>
+                        </td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>R$ 4,50</td>
+                    </tr>
+                </table>
+                <table>
+                    <h2>Pão Funcional de fôrma</h2>
+                    <th></th>
+                    <th>19 cm</th>
+                    <tr>
+                        <td>Pão de Fôrma Funcional de Cenoura orgânica<p class="td_p_components">Farinha de Arroz ,
+                                fécula de batata, Fécula de mandioca, purê de cenoura orgânica, açúcar demerara,
+                                psyllium, goma xantana, sal e levain (fermento natural).</p>
+                        </td>
+                        <td>R$ 22,00</td>
+                    </tr>
+                    <tr>
+                        <td>Pão funcional de fôrma de aveia<p class="td_p_components">Farinha de Arroz integral, farinha
+                                de aveia, fécula de batata, Fécula de mandioca, açúcar demerara, psyllium, goma xantana,
+                                sal e levain (fermento natural).</p>
+                        </td>
+                        <td>R$ 22,00</td>
+                    </tr>
+                    <tr>
+                        <td>Pão funcional de fôrma com matchá<p class="td_p_components">Farinha de Arroz integral,
+                                fécula de batata, Fécula de mandioca, açúcar demerara, psyllium, goma xantana, sal,
+                                matchá e levain (fermento natural).</p>
+                        </td>
+                        <td>R$ 22,00</td>
+                    </tr>
+                    <tr>
+                        <td>Pão Funcional de fôrma com batata doce roxa orgânica<p class="td_p_components">Farinha de
+                                Arroz integral, fécula de batata, Fécula de mandioca, açúcar demerara, psyllium, goma
+                                xantana, purê de batata doce roxa orgânica , sal e levain (fermento natural).</p>
+                        </td>
+                        <td>R$ 22,00</td>
+                    </tr>
+                    <tr>
+                        <td>Pao Funcional de fôrma cúrcuma com alecrim<p class="td_p_components">Farinha de Arroz ,
+                                fécula de batata, Fécula de mandioca, açúcar demerara, psyllium, goma xantana , sal e
+                                levain (fermento natural), cúrcuma e alecrim</p>
+                        </td>
+                        <td>R$ 22,00</td>
+                    </tr>
+                </table>
+                <table>
+                    <h2>Pizzas Veganas/ sem lactose</h2>
+                    <th></th>
+                    <th>23 cm - 4 Fatias</th>
+                    <th>28 cm - 6 Fatias</th>
+                    <th>33 cm - 8 Fatias</th>
+                    <tr>
+                        <td>Marguerita Vegana<p class="td_p_components">Queijo cremoso vegetal, tomate, manjericão
+                                fresco e desidratado, azeitona e orégano</p>
+                        </td>
+                        <td>R$ 49,00</td>
+                        <td>R$ 56,00</td>
+                        <td>R$ 63,00</td>
+                    </tr>
+                    <tr>
+                        <td>Tofu<p class="td_p_components">Queijo cremoso vegetal, tomate, cebola, tofu , azeitona e
+                                orégano</p>
+                        </td>
+                        <td>R$ 49,00</td>
+                        <td>R$ 56,00</td>
+                        <td>R$ 63,00</td>
+                    </tr>
+                    <tr>
+                        <td>Vegana<p class="td_p_components">Queijo cremoso vegetal, milho, ervilha, palmito, cebola,
+                                azeitona e orégano</p>
+                        </td>
+                        <td>R$ 49,00</td>
+                        <td>R$ 56,00</td>
+                        <td>R$ 63,00</td>
+                    </tr>
+                    <tr>
+                        <td>Banana Vegana<p class="td_p_components">Queijo cremoso vegetal, banana, canela e açúcar</p>
+                        </td>
+                        <td>R$ 47,00</td>
+                        <td>R$ 56,00</td>
+                        <td>R$ 63,00</td>
+                    </tr>
+                    <tr>
+                        <td>Not Dog Vegana<p class="td_p_components">Queijo cremoso vegetal, salsicha de soja ao molho
+                                de tomate, pimentão, cebola, milho, passas, batata palha, azeitona e orégano</p>
+                        </td>
+                        <td>R$ 49,00</td>
+                        <td>R$ 56,00</td>
+                        <td>R$ 63,00</td>
+                    </tr>
+                    <tr>
+                        <td>Goiabada<p class="td_p_components">Queijo cremoso vegano, tofu frescal e goiabada</p>
+                        </td>
+                        <td>R$ 49,00</td>
+                        <td>R$ 56,00</td>
+                        <td>R$ 63,00</td>
+                    </tr>
+                    <tr>
+                        <td>Diamante Vegana<p class="td_p_components">Queijo cremoso vegetal,tofu ,champignons,tomate
+                                grape,allho poró,azeitona e orégano</p>
+                        </td>
+                        <td>R$ 49,00</td>
+                        <td>R$ 56,00</td>
+                        <td>R$ 63,00</td>
+                    </tr>
+                    <tr>
+                        <td>Isca Barbecue<p class="td_p_components">Queijo Cremoso vegetal, isca de soja, cebola, molho
+                                barbecue, azeitona e orégano.</p>
+                        </td>
+                        <td>R$ 49,00</td>
+                        <td>R$ 56,00</td>
+                        <td>R$ 63,00</td>
+                    </tr>
+                </table>
+                <table>
+                    <h2>Sobremesa Funcional Vegana</h2>
+                    <th></th>
+                    <th>75 g</th>
+                    <tr>
+                        <td>Brownie Vegano e sem trigo. Contém açúcar<p class="td_p_components">Açúcar demerara,
+                                chocolate 70% sem leite, Farinha de Arroz, fécula de mandioca, cacau em pó, goma
+                                xantana, óleo de girassol.</p>
+                        </td>
+                        <td>R$ 8,50</td>
+                    </tr>
+                </table>
+                <table>
+                    <h2>Pizzas Doces Especiais</h2>
+                    <th></th>
+                    <th>23 cm - 4 Fatias</th>
+                    <th>28 cm - 6 Fatias</th>
+                    <th>33 cm - 8 Fatias</th>
+                    <tr>
+                        <td>Foundi<p class="td_p_components">Pêssego, abacaxi, figo e Nutella</p>
+                        </td>
+                        <td>R$ 46,00</td>
+                        <td>R$ 54,00</td>
+                        <td>R$ 60,00</td>
+                    </tr>
+                    <tr>
+                        <td>Ouro Preto<p class="td_p_components">Nutella e cereja</p>
+                        </td>
+                        <td>R$ 46,00</td>
+                        <td>R$ 54,00</td>
+                        <td>R$ 60,00</td>
+                    </tr>
+                    <tr>
+                        <td>Prestígio<p class="td_p_components">Nutella e coco ralado</p>
+                        </td>
+                        <td>R$ 46,00</td>
+                        <td>R$ 54,00</td>
+                        <td>R$ 60,00</td>
+                    </tr>
+                    <tr>
+                        <td>Choquito<p class="td_p_components">Nutella e castanha</p>
+                        </td>
+                        <td>R$ 46,00</td>
+                        <td>R$ 54,00</td>
+                        <td>R$ 60,00</td>
+                    </tr>
+                    <tr>
+                        <td>Banana com Nutella<p class="td_p_components">Nutella e banana</p>
+                        </td>
+                        <td>R$ 46,00</td>
+                        <td>R$ 54,00</td>
+                        <td>R$ 60,00</td>
+                    </tr>
+                    <tr>
+                        <td>Paçoca<p class="td_p_components">Doce de leite Viçosa e paçoca</p>
+                        </td>
+                        <td>R$ 46,00</td>
+                        <td>R$ 54,00</td>
+                        <td>R$ 60,00</td>
+                    </tr>
+                    <tr>
+                        <td>Ovomaltine<p class="td_p_components">Nutella e ovomaltine</p>
+                        </td>
+                        <td>R$ 46,00</td>
+                        <td>R$ 54,00</td>
+                        <td>R$ 60,00</td>
+                    </tr>
+                    <tr>
+                        <td>Nutella com morango<p class="td_p_components">Nutella com morango in natura</p>
+                        </td>
+                        <td>R$ 46,00</td>
+                        <td>R$ 54,00</td>
+                        <td>R$ 60,00</td>
+                    </tr>
+                    <tr>
+                        <td>Amêndoas Nevadas<p class="td_p_components">Doce de leite Viçosa,amêndoas e leite ninho</p>
+                        </td>
+                        <td>R$ 49,00</td>
+                        <td>R$ 56,00</td>
+                        <td>R$ 63,00</td>
+                    </tr>
+                    <tr>
+                        <td>Chocolate 60% Com Farofa De Amendoim<p class="td_p_components"></p>
+                        </td>
+                        <td>R$ 49,00</td>
+                        <td>R$ 56,00</td>
+                        <td>R$ 63,00</td>
+                    </tr>
+                </table>
+                <table>
+                    <h2>Calzones</h2>
+                    <th></th>
+                    <th>Individual</th>
+                    <tr>
+                        <td>Nutella com Banana<p class="td_p_components">Nutella e banana</p>
+                        </td>
+                        <td>R$ 28,00</td>
+                    </tr>
+                    <tr>
+                        <td>Romeu e Julieta<p class="td_p_components">Mussarela, queijo Minas, e goiabada</p>
+                        </td>
+                        <td>R$ 28,00</td>
+                    </tr>
+                    <tr>
+                        <td>Light<p class="td_p_components">Mussarela, peito de peru, queijo Minas, molho de espinafre e
+                                orégano</p>
+                        </td>
+                        <td>R$ 28,00</td>
+                    </tr>
+                    <tr>
+                        <td>Pepperoni<p class="td_p_components">Mussarela, pepperoni, cream cheese Philadelphia e
+                                orégano</p>
+                        </td>
+                        <td>R$ 34,00</td>
+                    </tr>
+                </table>
+                <table>
+                    <h2>Pizzas Low Carb</h2>
+                    <th></th>
+                    <th>28 cm - 6 fatias</th>
+                    <tr>
+                        <td>Frango LOW CARB<p class="td_p_components">Molho, mussarela, frango, tomate, milho, azeitona
+                                e orégano.</p>
+                        </td>
+                        <td>R$ 60,00</td>
+                    </tr>
+                    <tr>
+                        <td>Brócolis LOW CARB<p class="td_p_components">Molho, mussarela, brócolis refogado, peito de
+                                peru , alho frito, azeitona e orégano.</p>
+                        </td>
+                        <td>R$ 60,00</td>
+                    </tr>
+                    <tr>
+                        <td>Bacon LOW CARB<p class="td_p_components">Molho, mussarela, bacon fatiado, milho, azeitona e
+                                orégano.</p>
+                        </td>
+                        <td>R$ 60,00</td>
+                    </tr>
+                    <tr>
+                        <td>Calabresa LOW CARB<p class="td_p_components">Molho, mussarela, calabresa, tomate, cebola,
+                                azeitona e orégano.</p>
+                        </td>
+                        <td>R$ 60,00</td>
+                    </tr>
+                    <tr>
+                        <td>Lombo canadense LOW CARB<p class="td_p_components">Molho, mussarela, lombo canadense,
+                                cebola, azeitona e orégano.</p>
+                        </td>
+                        <td>R$ 60,00</td>
+                    </tr>
+                    <tr>
+                        <td>Gorgonzola LOW CARB<p class="td_p_components">Molho, mussarela, tomate, gorgonzola, azeitona
+                                e orégano.</p>
+                        </td>
+                        <td>R$ 60,00</td>
+                    </tr>
+                    <tr>
+                        <td>Manjericão LOW CARB<p class="td_p_components">Molho, mussarela, tomate, manjericão fresco e
+                                desidratado.</p>
+                        </td>
+                        <td>R$ 60,00</td>
+                    </tr>
+                </table>
+                <table>
+                    <h2>Maionese Caseira</h2>
+                    <th></th>
+                    <th>30g</th>
+                    <tr>
+                        <td>Maionese Caseira Tradicional<p class="td_p_components"></p>
+                        </td>
+                        <td>R$ 1,00</td>
+                    </tr>
+                    <tr>
+                        <td>Maionese Caseira Defumada<p class="td_p_components"></p>
+                        </td>
+                        <td>R$ 1,00</td>
+                    </tr>
+                    <tr>
+                        <td>Maionese Caseira Salsa e Cebola<p class="td_p_components"></p>
+                        </td>
+                        <td>R$ 1,00</td>
+                    </tr>
+                </table>
+                <table>
+                    <h2>Pães Funcionais sem trigo, Veganos e fermentação natural</h2>
+                    <th></th>
+                    <th>aprox 75 gramas</th>
+                    <th>aprox 160 gramas</th>
+                    <th>aprox 60 gramas</th>
+                    <th>143 g</th>
+                    <th>aprox 290 g</th>
+                    <tr>
+                        <td>Mini pão Rústico de milho - Vegano e sem trigo<p class="td_p_components">Farinha de Arroz
+                                integral, fubá de milho, fécula de batata, Fécula de mandioca, açúcar demerara,
+                                psyllium, goma xantana, azeite extra virgem, sal e levain (fermento natural).</p>
+                        </td>
+                        <td>R$ 4,00</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                    </tr>
+                    <tr>
+                        <td>Mini pão rústico de batata doce roxa - Vegano e sem trigo<p class="td_p_components">Farinha
+                                de Arroz integral, fécula de batata, Fécula de mandioca, purê de batata doce roxa,
+                                açúcar demerara, psyllium, goma xantana, sal e levain (fermento natural).</p>
+                        </td>
+                        <td>R$ 4,00</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                    </tr>
+                    <tr>
+                        <td>Mini pão rústico de abóbora - Vegano e sem trigo<p class="td_p_components">Farinha de Arroz
+                                integral, fécula de batata, Fécula de mandioca, purê de abóbora, açúcar demerara,
+                                psyllium, goma xantana, sal e levain (fermento natural).</p>
+                        </td>
+                        <td>R$ 4,00</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                    </tr>
+                    <tr>
+                        <td>Bisnaguinha funcional de cenoura<p class="td_p_components">Farinha de Arroz integral, fécula
+                                de batata, Fécula de mandioca, purê de cenoura, açúcar demerara, psyllium, goma xantana,
+                                sal e levain (fermento natural).</p>
+                        </td>
+                        <td>R$ 4,00</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                    </tr>
+                    <tr>
+                        <td>Pão Australiano Funcional Vegano<p class="td_p_components">Farinha de Arroz integral, fécula
+                                de batata, Fécula de mandioca, sal, açúcar mascavo e demerara orgânico, cacau alcalino,
+                                manteiga de coco, goma xantana, psyllium, levain (fermento natural), fubá e canela em
+                                pó.</p>
+                        </td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>R$ 16,00</td>
+                        <td>---</td>
+                    </tr>
+                    <tr>
+                        <td>Pão Francês Funcional massa branca<p class="td_p_components">Farinha de Arroz, Farinha de
+                                Arroz integral, fécula de batata, Fécula de mandioca, açúcar demerara orgânico,
+                                psyllium, goma xantana, sal, azeite extra virgem, óleo de girassol e levain (fermento
+                                natural) . finalizado com gergelim.</p>
+                        </td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>R$ 4,00</td>
+                        <td>---</td>
+                        <td>---</td>
+                    </tr>
+                    <tr>
+                        <td>Pão Francês Funcional Integral<p class="td_p_components">Farinha de Arroz integral, fécula
+                                de batata, Fécula de mandioca, açúcar demerara orgânico, psyllium, goma xantana, sal,
+                                azeite extra virgem, óleo de girassol e levain (fermento natural) . finalizado com
+                                gergelim.</p>
+                        </td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>R$ 4,00</td>
+                        <td>---</td>
+                        <td>---</td>
+                    </tr>
+                    <tr>
+                        <td>Pão rústico de batata doce roxa Médio<p class="td_p_components">Vegano e sem trigo Farinha
+                                de Arroz integral, fécula de batata, Fécula de mandioca, purê de batata doce roxa,
+                                açúcar demerara, psyllium, goma xantana, sal e levain (fermento natur</p>
+                        </td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>R$ 15,00</td>
+                    </tr>
+                    <tr>
+                        <td>Pão rústico de carvão ativado médio<p class="td_p_components">Farinha de Arroz integral,
+                                fécula de batata, Fécula de mandioca, açúcar demerara orgânico, psyllium, goma xantana,
+                                sal, azeite extra virgem, óleo de girassol, carvão ativado e levain (fermento natural)
+                            </p>
+                        </td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>R$ 16,00</td>
+                    </tr>
+                    <tr>
+                        <td>Mini Bisnaga para sanduiche com farinha Teff<p class="td_p_components">Farinha de Arroz
+                                integral, farinha de Teff fécula de batata, Fécula de mandioca, açúcar demerara
+                                orgânico, psyllium, goma xantana, sal, azeite extra virgem, óleo de girassol e levain
+                                (fermento natural)aproximadamente 16 cm - 160 g</p>
+                        </td>
+                        <td>---</td>
+                        <td>R$ 8,50</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                    </tr>
+                    <tr>
+                        <td>RÚSTICO ABOBORA MEDIO<p class="td_p_components">Farinha de Arroz integral, fécula de batata,
+                                Fécula de mandioca, purê de abóbora, açúcar demerara, psyllium, goma xantana, sal e
+                                levain (fermento natural).</p>
+                        </td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>R$ 15,00</td>
+                    </tr>
+                    <tr>
+                        <td>RÚSTICO CÚRCUMA E ALECRIM MÉDIO<p class="td_p_components">Farinha de Arroz integral, fécula
+                                de batata, Fécula de mandioca, açúcar demerara, psyllium, goma xantana, cúrcuma ,
+                                alecrim, sal e levain (fermento natural).</p>
+                        </td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>R$ 16,00</td>
+                    </tr>
+                </table>
+                <table>
+                    <h2>Cervejas Tradicionais</h2>
+                    <th></th>
+                    <th>Lata</th>
+                    <th>Long Neck</th>
+                    <tr>
+                        <td>Brahma 473 ml<p class="td_p_components"></p>
+                        </td>
+                        <td>R$ 6,50</td>
+                        <td>---</td>
+                    </tr>
+                    <tr>
+                        <td>Skol 473 ml<p class="td_p_components"></p>
+                        </td>
+                        <td>R$ 6,50</td>
+                        <td>---</td>
+                    </tr>
+                    <tr>
+                        <td>Bohemia<p class="td_p_components"></p>
+                        </td>
+                        <td>---</td>
+                        <td>R$ 5,50</td>
+                    </tr>
+                    <tr>
+                        <td>Malzbier<p class="td_p_components"></p>
+                        </td>
+                        <td>---</td>
+                        <td>R$ 5,50</td>
+                    </tr>
+                    <tr>
+                        <td>Heineken<p class="td_p_components"></p>
+                        </td>
+                        <td>---</td>
+                        <td>R$ 7,00</td>
+                    </tr>
+                    <tr>
+                        <td>Stella Artois<p class="td_p_components"></p>
+                        </td>
+                        <td>---</td>
+                        <td>R$ 6,00</td>
+                    </tr>
+                    <tr>
+                        <td>Brahma Zero<p class="td_p_components"></p>
+                        </td>
+                        <td>R$ 5,00</td>
+                        <td>---</td>
+                    </tr>
+                    <tr>
+                        <td>Corona Extra<p class="td_p_components"></p>
+                        </td>
+                        <td>---</td>
+                        <td>R$ 7,50</td>
+                    </tr>
+                    <tr>
+                        <td>Budweiser<p class="td_p_components"></p>
+                        </td>
+                        <td>---</td>
+                        <td>R$ 6,00</td>
+                    </tr>
+                    <tr>
+                        <td>Krug Dry Stout<p class="td_p_components">Cerveja Escura Com Nitrogênio 473ml</p>
+                        </td>
+                        <td>---</td>
+                        <td>R$ 15,00</td>
+                    </tr>
+                </table>
+                <table>
+                    <h2>Cervejaria Áustria</h2>
+                    <th></th>
+                    <th>Garrafa</th>
+                    <tr>
+                        <td>Cerveja Lager<p class="td_p_components">Leve, cremosa, sabor malte</p>
+                        </td>
+                        <td>R$ 15,00</td>
+                    </tr>
+                    <tr>
+                        <td>Cerveja Hefe Weizen<p class="td_p_components">Alta fermentação sabor trigo</p>
+                        </td>
+                        <td>R$ 17,00</td>
+                    </tr>
+                    <tr>
+                        <td>Cerveja Dunkel<p class="td_p_components">Escura, seca e intensa, sabor leve com nota de café
+                            </p>
+                        </td>
+                        <td>R$ 17,00</td>
+                    </tr>
+                    <tr>
+                        <td>Cerveja Golden Ale<p class="td_p_components">Alta fermentação, amargor baixo, sabor frutado
+                            </p>
+                        </td>
+                        <td>R$ 17,00</td>
+                    </tr>
+                    <tr>
+                        <td>Cerveja Artesanal<p class="td_p_components"></p>
+                        </td>
+                        <td>R$ 17,00</td>
+                    </tr>
+                </table>
+                <table>
+                    <h2>Bebidas</h2>
+                    <th></th>
+                    <th>350 ml</th>
+                    <th>500 ml</th>
+                    <th>Lata</th>
+                    <th>1 litro</th>
+                    <th>2 litros</th>
+                    <tr>
+                        <td>Coca-cola<p class="td_p_components"></p>
+                        </td>
+                        <td>R$ 4,50</td>
+                        <td>R$ 6,50</td>
+                        <td>---</td>
+                        <td>R$ 9,50</td>
+                        <td>R$ 12,50</td>
+                    </tr>
+                    <tr>
+                        <td>Guaraná Antárctica<p class="td_p_components"></p>
+                        </td>
+                        <td>R$ 4,50</td>
+                        <td>R$ 6,50</td>
+                        <td>---</td>
+                        <td>R$ 9,00</td>
+                        <td>R$ 12,00</td>
+                    </tr>
+                    <tr>
+                        <td>Fanta Laranja<p class="td_p_components"></p>
+                        </td>
+                        <td>R$ 4,50</td>
+                        <td>R$ 5,50</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                    </tr>
+                    <tr>
+                        <td>Fanta Uva<p class="td_p_components"></p>
+                        </td>
+                        <td>R$ 4,50</td>
+                        <td>R$ 5,50</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                    </tr>
+                    <tr>
+                        <td>Sprite<p class="td_p_components"></p>
+                        </td>
+                        <td>R$ 4,50</td>
+                        <td>R$ 5,50</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                    </tr>
+                    <tr>
+                        <td>Suco Del Valle - Uva<p class="td_p_components"></p>
+                        </td>
+                        <td>R$ 5,50</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                    </tr>
+                    <tr>
+                        <td>Suco Del Valle - Manga<p class="td_p_components"></p>
+                        </td>
+                        <td>R$ 5,50</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                    </tr>
+                    <tr>
+                        <td>Suco Del Valle - Maracujá<p class="td_p_components"></p>
+                        </td>
+                        <td>R$ 5,50</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                    </tr>
+                    <tr>
+                        <td>Suco Del Valle - Pêssego<p class="td_p_components"></p>
+                        </td>
+                        <td>R$ 5,50</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                    </tr>
+                    <tr>
+                        <td>Suco Del Valle - Goiaba<p class="td_p_components"></p>
+                        </td>
+                        <td>R$ 5,50</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                    </tr>
+                    <tr>
+                        <td>Schweppes<p class="td_p_components"></p>
+                        </td>
+                        <td>R$ 4,50</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                    </tr>
+                    <tr>
+                        <td>Schweppes Citrus<p class="td_p_components"></p>
+                        </td>
+                        <td>R$ 4,50</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                    </tr>
+                    <tr>
+                        <td>Água Tônica<p class="td_p_components"></p>
+                        </td>
+                        <td>R$ 4,50</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                    </tr>
+                    <tr>
+                        <td>Água Mineral sem Gás<p class="td_p_components"></p>
+                        </td>
+                        <td>---</td>
+                        <td>R$ 3,50</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                    </tr>
+                    <tr>
+                        <td>Água Mineral com Gás<p class="td_p_components"></p>
+                        </td>
+                        <td>---</td>
+                        <td>R$ 4,00</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                    </tr>
+                    <tr>
+                        <td>H2Oh<p class="td_p_components"></p>
+                        </td>
+                        <td>---</td>
+                        <td>R$ 5,00</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                    </tr>
+                    <tr>
+                        <td>Energético Red Bull<p class="td_p_components"></p>
+                        </td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>R$ 12,00</td>
+                        <td>---</td>
+                        <td>---</td>
+                    </tr>
+                    <tr>
+                        <td>Suco natural de laranja 300ml<p class="td_p_components">Suco natural da fruta sem açúcar</p>
+                        </td>
+                        <td>R$ 6,00</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                    </tr>
+                    <tr>
+                        <td>Suco natural de morango<p class="td_p_components">Suco natural da fruta sem açúcar</p>
+                        </td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>R$ 6,00</td>
+                        <td>---</td>
+                    </tr>
+                    <tr>
+                        <td>Suco natural de maracujá<p class="td_p_components">Suco natural da fruta sem açúcar</p>
+                        </td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>R$ 6,00</td>
+                        <td>---</td>
+                    </tr>
+                    <tr>
+                        <td>Suco natural de laranja com acerola<p class="td_p_components">Suco natural da fruta de
+                                laranja com acerola sem açúcar .</p>
+                        </td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>R$ 6,00</td>
+                        <td>---</td>
+                    </tr>
+                    <tr>
+                        <td>Guaraná Antártica zero<p class="td_p_components"></p>
+                        </td>
+                        <td>R$ 4,50</td>
+                        <td>R$ 6,50</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>R$ 12,00</td>
+                    </tr>
+                    <tr>
+                        <td>Coca Cola Zero<p class="td_p_components"></p>
+                        </td>
+                        <td>R$ 4,50</td>
+                        <td>R$ 6,50</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>R$ 12,50</td>
+                    </tr>
+                    <tr>
+                        <td>H2O Limoneto<p class="td_p_components"></p>
+                        </td>
+                        <td>---</td>
+                        <td>R$ 5,00</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                    </tr>
+                </table>
+                <table>
+                    <h2>Vinhos</h2>
+                    <th></th>
+                    <th>Garrafa</th>
+                    <tr>
+                        <td>Monte Pascoal Virtus Cabernet Suave 🇧🇷<p class="td_p_components">Brasil</p>
+                        </td>
+                        <td>R$ 50,00</td>
+                    </tr>
+                    <tr>
+                        <td>Monte Pascoal Virtus Cabernet Seco 🇧🇷<p class="td_p_components">Brasil</p>
+                        </td>
+                        <td>R$ 50,00</td>
+                    </tr>
+                    <tr>
+                        <td>Callia Malbec 🇦🇷<p class="td_p_components">Argentina</p>
+                        </td>
+                        <td>R$ 48,00</td>
+                    </tr>
+                    <tr>
+                        <td>Finca Flichman Malbec 🇦🇷<p class="td_p_components">Argentina</p>
+                        </td>
+                        <td>R$ 48,00</td>
+                    </tr>
+                    <tr>
+                        <td>Cava Negra Malbec 🇦🇷<p class="td_p_components">Argentina</p>
+                        </td>
+                        <td>R$ 52,00</td>
+                    </tr>
+                    <tr>
+                        <td>Primitivo 🇮🇹<p class="td_p_components">Itália</p>
+                        </td>
+                        <td>R$ 82,00</td>
+                    </tr>
+                    <tr>
+                        <td>Lambrusco Rosso 🇮🇹<p class="td_p_components">Itália</p>
+                        </td>
+                        <td>R$ 53,00</td>
+                    </tr>
+                    <tr>
+                        <td>Lambrusco Bianco 🇮🇹<p class="td_p_components">Itália</p>
+                        </td>
+                        <td>R$ 53,00</td>
+                    </tr>
+                    <tr>
+                        <td>Nero D’Avola 🇮🇹<p class="td_p_components">Itália</p>
+                        </td>
+                        <td>R$ 58,00</td>
+                    </tr>
+                    <tr>
+                        <td>Gazela Vinho Verde 🇵🇹<p class="td_p_components">Portugal</p>
+                        </td>
+                        <td>R$ 44,00</td>
+                    </tr>
+                    <tr>
+                        <td>Grão do Vasco 🇵🇹<p class="td_p_components">Portugal</p>
+                        </td>
+                        <td>R$ 48,00</td>
+                    </tr>
+                    <tr>
+                        <td>Pé do Esporão 🇵🇹<p class="td_p_components">Portugal</p>
+                        </td>
+                        <td>R$ 60,00</td>
+                    </tr>
+                    <tr>
+                        <td>Le Jaja De De Jau Cabernet 🇫🇷<p class="td_p_components">França</p>
+                        </td>
+                        <td>R$ 77,00</td>
+                    </tr>
+                    <tr>
+                        <td>Le Jaja De De Jau Syrah 🇫🇷<p class="td_p_components">França</p>
+                        </td>
+                        <td>R$ 77,00</td>
+                    </tr>
+                    <tr>
+                        <td>Santa Carolina 🇨🇱<p class="td_p_components">Chile</p>
+                        </td>
+                        <td>R$ 45,00</td>
+                    </tr>
+                    <tr>
+                        <td>Santa Helena 🇨🇱<p class="td_p_components">Chile</p>
+                        </td>
+                        <td>R$ 45,00</td>
+                    </tr>
+                    <tr>
+                        <td>Concha Y Toro 🇨🇱<p class="td_p_components">Chile</p>
+                        </td>
+                        <td>R$ 48,00</td>
+                    </tr>
+                    <tr>
+                        <td>Gran Reserva Concha Y Toro 🇨🇱<p class="td_p_components">Chile</p>
+                        </td>
+                        <td>R$ 150,00</td>
+                    </tr>
+                    <tr>
+                        <td>Farmus Reserva Cabernet 🇨🇱<p class="td_p_components">Chile</p>
+                        </td>
+                        <td>R$ 55,00</td>
+                    </tr>
+                    <tr>
+                        <td>Farmus Reserva Carmenere 🇨🇱<p class="td_p_components">Chile</p>
+                        </td>
+                        <td>R$ 55,00</td>
+                    </tr>
+                    <tr>
+                        <td>Farmus Reserva Syrah 🇨🇱<p class="td_p_components">Chile</p>
+                        </td>
+                        <td>R$ 55,00</td>
+                    </tr>
+                    <tr>
+                        <td>Baron de Rothschild Carmenere 🇨🇱<p class="td_p_components">Chile</p>
+                        </td>
+                        <td>R$ 52,00</td>
+                    </tr>
+                    <tr>
+                        <td>Red Wood Creek Pinot Noir 🇺🇸<p class="td_p_components">USA</p>
+                        </td>
+                        <td>R$ 53,00</td>
+                    </tr>
+                    <tr>
+                        <td>Red Wood Creek Cabernet 🇺🇸<p class="td_p_components">USA</p>
+                        </td>
+                        <td>R$ 53,00</td>
+                    </tr>
+                    <tr>
+                        <td>Sanama Cabernet<p class="td_p_components">Chile</p>
+                        </td>
+                        <td>R$ 42,00</td>
+                    </tr>
+                    <tr>
+                        <td>Foye Cabernet Sauvignon<p class="td_p_components">Chile</p>
+                        </td>
+                        <td>R$ 58,00</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="infos">
+                <div class="left">
+                    <p class="address">R. Sábino José Ferreira, 719 - Carmo, Barbacena - MG, 36200-656</p>
+                    <p class="tel">3333-3333</p>
+                </div>
+                <div class="right">
+                    <p class="instagram"><a target="_blank"
+                            href="https://www.instagram.com/pizzariareal.bq/">pizzariareal.bq</a><img
+                            src="assets/images/instagram.1051d3cb1e4b63e3bc6770e52f924200.svg"></p>
+                    <p class="aiqfome"><a target="_blank" href="https://aiqfome.com/MG/barbacena/pizzaria-real">Pizzaria
+                            Real</a><img src="assets/images/aiqfome.58a4f3a401a28d7251ad6ed2e468eec6.svg"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div onclick="handleBairros()" class="bairros_overlay"><div onclick="preventingDefault()" class="bairros_wrapper"><div class="close_overlay"><img src="assets/images/CloseSearch.7070e4fef6d9d798a8a72cc8f1d442b9.svg"></div><h2>Taxas de Entrega</h2><table><tr><td>Água Santa</td><td>R$ 8,00</td></tr><tr><td>Andaraí</td><td>R$ 5,00</td></tr><tr><td>Belvedere</td><td>R$ 5,00</td></tr><tr><td>Boa Morte</td><td>R$ 5,00</td></tr><tr><td>Boa Vista</td><td>R$ 5,00</td></tr><tr><td>Bom Pastor</td><td>R$ 5,00</td></tr><tr><td>Caiçaras</td><td>R$ 6,00</td></tr><tr><td>Caminho Novo</td><td>R$ 5,00</td></tr><tr><td>Campo</td><td>R$ 5,00</td></tr><tr><td>Carmo</td><td>grátis</td></tr><tr><td>Centro</td><td>R$ 5,00</td></tr><tr><td>Chácaras das Andorinhas</td><td>R$ 5,00</td></tr><tr><td>Colônia Rodrigo Silva</td><td>R$ 10,00</td></tr><tr><td>Correia de Almeida - Centro</td><td>R$ 45,00</td></tr><tr><td>Diniz</td><td>R$ 5,00</td></tr><tr><td>Diniz II</td><td>R$ 5,00</td></tr><tr><td>Dom Bosco</td><td>R$ 5,00</td></tr><tr><td>Eucisa</td><td>R$ 6,00</td></tr><tr><td>Fátima</td><td>R$ 5,00</td></tr><tr><td>Floresta</td><td>R$ 6,00</td></tr><tr><td>Funcionários</td><td>R$ 5,00</td></tr><tr><td>Galego</td><td>R$ 16,00</td></tr><tr><td>Greenville</td><td>R$ 8,00</td></tr><tr><td>Grogotó</td><td>R$ 5,00</td></tr><tr><td>Guarani</td><td>R$ 7,00</td></tr><tr><td>Hospital Regional [SAMU]</td><td>R$ 7,00</td></tr><tr><td>Hotel Morada do Imperador</td><td>R$ 20,00</td></tr><tr><td>Ibiapaba</td><td>R$ 5,00</td></tr><tr><td>Ipanema</td><td>R$ 5,00</td></tr><tr><td>Jardim</td><td>R$ 5,00</td></tr><tr><td>João Paulo II</td><td>R$ 9,00</td></tr><tr><td>Mansões</td><td>R$ 5,00</td></tr><tr><td>Marino Ceolin</td><td>R$ 5,00</td></tr><tr><td>Monsenhor Mário Quintão</td><td>R$ 5,00</td></tr><tr><td>Monte Mário</td><td>R$ 5,00</td></tr><tr><td>Nossa Senhora Aparecida</td><td>R$ 5,00</td></tr><tr><td>Nova Suíça</td><td>R$ 7,00</td></tr><tr><td>Novo Horizonte</td><td>R$ 5,00</td></tr><tr><td>Padre Cunha</td><td>R$ 5,00</td></tr><tr><td>Panorama</td><td>R$ 5,00</td></tr><tr><td>Park Hotel Mantiqueira</td><td>R$ 18,00</td></tr><tr><td>Passarinhos</td><td>R$ 5,00</td></tr><tr><td>Ponte do Cosme</td><td>R$ 10,00</td></tr><tr><td>Ponte do Cosme - Vila Sofia</td><td>R$ 12,00</td></tr><tr><td>Pontilhão</td><td>R$ 5,00</td></tr><tr><td>Posto garanhão</td><td>R$ 12,00</td></tr><tr><td>Retiro das Rosas</td><td>R$ 8,00</td></tr><tr><td>Rivelli</td><td>R$ 6,00</td></tr><tr><td>Roman</td><td>R$ 10,00</td></tr><tr><td>Roselanche</td><td>R$ 15,00</td></tr><tr><td>Santa Cecília</td><td>R$ 5,00</td></tr><tr><td>Santa Efigênia</td><td>R$ 5,00</td></tr><tr><td>Santa Luzia</td><td>R$ 5,00</td></tr><tr><td>Santa Tereza I</td><td>R$ 5,00</td></tr><tr><td>Santa Tereza II</td><td>R$ 5,00</td></tr><tr><td>Santo Antônio</td><td>R$ 6,00</td></tr><tr><td>São Cristóvão</td><td>R$ 5,00</td></tr><tr><td>São Francisco</td><td>R$ 6,00</td></tr><tr><td>São Geraldo</td><td>R$ 5,00</td></tr><tr><td>São Jorge</td><td>R$ 5,00</td></tr><tr><td>São José</td><td>R$ 5,00</td></tr><tr><td>São Pedro</td><td>R$ 5,00</td></tr><tr><td>São Sebastião</td><td>R$ 5,00</td></tr><tr><td>São Vicente de Paula</td><td>R$ 6,00</td></tr><tr><td>Serra Verde</td><td>R$ 5,00</td></tr><tr><td>Vale das Rosas</td><td>R$ 6,00</td></tr><tr><td>Valentim Prenassi</td><td>R$ 5,00</td></tr><tr><td>Vilela</td><td>R$ 5,00</td></tr><tr><td>Vista Alegre</td><td>R$ 6,00</td></tr></table></div></div>
+
+
+    <script src="assets/main.js"></script>
+</body>
+
+</html>

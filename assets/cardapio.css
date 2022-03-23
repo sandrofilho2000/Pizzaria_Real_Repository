@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap');
+
+*{
+  font-family: 'Roboto Slab', serif;
+}
+
+body{
+  width: 100%;
+  height: 100%;
+  background-color: #0F0F0F;
+}
+
+
+#root, .App{
+  position: absolute;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+
+.wrapper{
+  max-width: 500px;
+  width: 95vw;
+  height: 95vh;
+  max-height: 1075px;
+  max-height: 650px;
+  background-color: white;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  left: 50%;
+  top: 50%;transform: translateY(-50%) translateX(-50%)
+}
+
+.cardapio_wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 96%;
+  width: 95%;
+  background-image: url('../assets/images/bgDesktop.2d9ec468ea799c688ac6.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.img_background{
+  height: 90%;
+  width: 88%;
+}
+
+
+.cardapio_container{
+  height: 80%;
+  width: 92%;
+  padding: 5px;
+  position: absolute;
+  top: -1px;
+  background: rgba(255, 255, 255, 0.801);
+  overflow: auto;
+}
+
+.cardapio_container::-webkit-scrollbar {
+  display: none;
+}
+
+
+.logo_container{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  top: 20px;
+  background-color: #0F0F0F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.img_logo{
+  height: 65%;
+  width: 80%;
+  filter: brightness(0) invert(1);
+  margin-top: -10px;
+}
+
+.wrapper table{
+  width: 95%;
+  margin: 0 auto;
+  position: relative;
+  top: 170px;
+  margin-bottom: 140px;
+  margin-top: 20px;
+  padding-top: 60px;
+}
+
+.wrapper  h2{
+  position: relative;
+  text-align: center;
+  top: 190px;
+  left: 50%;
+  font-size: 16px;
+  transform: translateX(-50%);
+}
+
+
+
+.wrapper table th{
+  padding: 0 10px;
+  font-weight: normal;
+  font-size: 10px;
+}
+
+.wrapper table tr{
+  position: relative;
+}
+
+
+
+.wrapper table td{
+  padding: 10px 10px;
+  font-size: 11px;
+  white-space: nowrap;
+  text-align: center;
+  font-weight: bold;
+}
+
+.wrapper table td:nth-of-type(1){
+  white-space: initial;
+}
+
+.wrapper table td:first-of-type{
+  padding: 10px 0px;
+  text-align: left;
+  font-size: 13px;
+}
+
+
+p.td_p_components{
+  font-size: 9px;
+  display: block;
+  white-space: initial;
+  max-width: 85%;
+}
+
+
+
+
+
+.infos{
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  bottom: 0;
+  backdrop-filter: blur( 4px );
+  background: #0f0f0f;
+  display: flex;
+  justify-content: space-around;
+}
+
+.infos div{
+  height: 100%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+
+.infos div p, .infos div p a{
+  color: #fff;
+  font-size: 8px;
+  text-decoration: none;
+}
+
+.infos div.right p{
+  display: flex;
+  align-items: center;
+  text-align: right;
+  justify-content: flex-end;
+}
+
+.infos div p img{
+  width: 20px;
+  filter: brightness(0) invert(1);
+  background: transparent;
+  margin-left: 10px;
+}
+  
+.infos div p a:hover{
+  text-decoration: underline;
+}
+
+
+
+@media (min-width: 750px) and (min-height: 450px){
+  .wrapper{
+    max-height: 770px;
+    max-width: 600px;
+  }
+
+  .wrapper table th {
+    font-size: 12px;
+  }
+
+
+  .wrapper table td {
+    font-size: 13px;
+  }
+
+  .wrapper table td:first-of-type {
+    font-size: 15px;
+  }
+
+  p.td_p_components {
+    font-size: 10px;
+  }
+
+  .infos{
+    height: 90px;
+  }
+  
+  .infos div p, .infos div p a{
+    font-size: 11px;
+  }
+}
