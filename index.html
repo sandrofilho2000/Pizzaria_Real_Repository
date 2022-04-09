@@ -7,24 +7,85 @@
     <meta description="O seu cardápio online Pizzaria Real">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/cardapio.css">
+    <link rel="stylesheet" href="assets/carrousel.css">
     <link rel="stylesheet" href="assets/bairros.css">
     <link rel="stylesheet" href="assets/searchBar.css">
     <link rel="shortcut icon" href="assets/images/favicon.jpg" type="image/x-icon">
+    <script src="assets/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <title>Pizzaria Real</title>
 </head>
 
 <body>
+    <div class="overlayLoad active">
+        <img src="./assets/images/logo_bgremover.42665a4ddb8ceccdb80a.png" alt="">
+    </div>
+
+    <div class="overlayCategories active">
+        <div class="owl-carousel wrapper_categories">
+            <div class="category_menu_single"> 
+                <img src="assets/images/categorias/pizzasSalgadas.jpg" alt="">
+                <p>Pizzas</p>
+            </div>
+            <div class="category_menu_single"> 
+                <img src="assets/images/categorias/pizzasVeganas.jpg" alt="">
+                <p>Pizzas Veganas</p>
+            </div>
+            <div class="category_menu_single"> 
+                <img src="assets/images/categorias/pizzasDoces.jpg" alt="">
+                <p>Pizzas Doces Especiais</p>
+            </div>
+            <div class="category_menu_single"> 
+                <img src="assets/images/categorias/calzone.jpg" alt="">
+                <p>Calzones</p>
+            </div>
+            <div class="category_menu_single"> 
+                <img src="assets/images/categorias/pizzaslowcarb.jpg" alt="">
+                <p>Pizzas Low Carb</p>
+            </div>
+            <div class="category_menu_single"> 
+                <img src="assets/images/categorias/pizzasSalgadas.jpg" alt="">
+                <p>Maioneses e bordas</p>
+            </div>
+            <div class="category_menu_single"> 
+                <img src="assets/images/categorias/cervejas.jpg" alt="">
+                <p>Cervejas Tradicionais</p>
+            </div>
+            <div class="category_menu_single"> 
+                <img src="assets/images/categorias/cervejas.jpg" alt="">
+                <p>Cervejas Austríacas</p>
+            </div>
+            <div class="category_menu_single"> 
+                <img src="assets/images/categorias/bebidas.jpg" alt="">
+                <p>Bebidas</p>
+            </div>
+            <div class="category_menu_single"> 
+                <img src="assets/images/categorias/vinhos.jpg" alt="">
+                <p>Vinhos</p>
+            </div>
+        </div>
+    </div>
+
     <div class="wrapper">
         <div class="searchBarWrapper">
             <div onclick="handleSearchIcon()" class="searchBarIcon"><img src="assets/images/SearchIcon.svg" alt="">
-            </div><input type="text" onchange="handleSearch(this)" onkeyup="handleSearch(this)" placeholder="Pesquise por sabor ou ingrediente...">
+            </div>
+            <input type="text" onchange="handleSearch(this)" onkeyup="handleSearch(this)" placeholder="Pesquise por sabor ou ingrediente...">
+
+            <div class="categoryIcon" title="Abrir Categorias">
+                <ion-icon name="pizza-outline"></ion-icon>
+            </div>
         </div>
-        <div onclick="handleBairros()" class="openBairros"><img src="assets/images/deliveryIcon.ba84d5bba7a20db015d898d4216e2ac0.svg"></div>
+        <div onclick="handleBairros()" class="openBairros"><img
+                src="assets/images/deliveryIcon.ba84d5bba7a20db015d898d4216e2ac0.svg"></div>
         <div class="cardapio_wrapper">
             <div class="cardapio_container">
                 <div class="logo_container"><img src="assets/images/logo_bgremover.42665a4ddb8ceccdb80a.png"
                         class="img_logo"></div>
-                <table>
+                <table class="category_table">
                     <h2>Pizzas</h2>
                     <th></th>
                     <th>23 cm - 4 Fatias</th>
@@ -435,87 +496,7 @@
                         <td>R$ 63,00</td>
                     </tr>
                 </table>
-                <table>
-                    <h2>PÃO FUNCIONAL LOW CARB</h2>
-                    <th></th>
-                    <th>APROX 80 G</th>
-                    <th>DUAS UNID DE 80 G</th>
-                    <th>APROX 230 G</th>
-                    <th>APROX 60 G</th>
-                    <tr>
-                        <td>PÃO AUSTRALIANO LOW CARB DE HAMBURGUER<p class="td_p_components">Farinha de castanha de
-                                caju, ovo, farinha de linhaça, sal, psyllium, goma xantana, mel orgânico para
-                                fermentação (grande parte consumido pela fermentação longa) e levain (fermento natural)
-                                . Fermentação lenta ( 24horas) e natural.</p>
-                        </td>
-                        <td>R$ 6,50</td>
-                        <td>R$ 12,00</td>
-                        <td>---</td>
-                        <td>---</td>
-                    </tr>
-                    <tr>
-                        <td>PÃO DE HAMBURGUER LOW CARB<p class="td_p_components">Farinha de castanha de caju, ovo,
-                                farinha de linhaça, sal, psyllium, goma xantana, açúcar demerara orgânico para
-                                fermentação (grande parte consumido pelo processo de fermentação) e levain (fermento
-                                natural) . Fermentação lenta ( 24horas) e natural. Pão Francês LOWCARB</p>
-                        </td>
-                        <td>R$ 6,50</td>
-                        <td>R$ 12,00</td>
-                        <td>---</td>
-                        <td>---</td>
-                    </tr>
-                    <tr>
-                        <td>PÃO FRANCÊS LOWCARB<p class="td_p_components">Farinha de castanha de caju, ovo, farinha de
-                                linhaça, sal, psyllium, goma xantana, açúcar demerara orgânico para fermentação e levain
-                                (fermento natural) . Fermentação lenta ( 24horas) e natural.</p>
-                        </td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>R$ 4,50</td>
-                    </tr>
-                </table>
-                <table>
-                    <h2>Pão Funcional de fôrma</h2>
-                    <th></th>
-                    <th>19 cm</th>
-                    <tr>
-                        <td>Pão de Fôrma Funcional de Cenoura orgânica<p class="td_p_components">Farinha de Arroz ,
-                                fécula de batata, Fécula de mandioca, purê de cenoura orgânica, açúcar demerara,
-                                psyllium, goma xantana, sal e levain (fermento natural).</p>
-                        </td>
-                        <td>R$ 22,00</td>
-                    </tr>
-                    <tr>
-                        <td>Pão funcional de fôrma de aveia<p class="td_p_components">Farinha de Arroz integral, farinha
-                                de aveia, fécula de batata, Fécula de mandioca, açúcar demerara, psyllium, goma xantana,
-                                sal e levain (fermento natural).</p>
-                        </td>
-                        <td>R$ 22,00</td>
-                    </tr>
-                    <tr>
-                        <td>Pão funcional de fôrma com matchá<p class="td_p_components">Farinha de Arroz integral,
-                                fécula de batata, Fécula de mandioca, açúcar demerara, psyllium, goma xantana, sal,
-                                matchá e levain (fermento natural).</p>
-                        </td>
-                        <td>R$ 22,00</td>
-                    </tr>
-                    <tr>
-                        <td>Pão Funcional de fôrma com batata doce roxa orgânica<p class="td_p_components">Farinha de
-                                Arroz integral, fécula de batata, Fécula de mandioca, açúcar demerara, psyllium, goma
-                                xantana, purê de batata doce roxa orgânica , sal e levain (fermento natural).</p>
-                        </td>
-                        <td>R$ 22,00</td>
-                    </tr>
-                    <tr>
-                        <td>Pao Funcional de fôrma cúrcuma com alecrim<p class="td_p_components">Farinha de Arroz ,
-                                fécula de batata, Fécula de mandioca, açúcar demerara, psyllium, goma xantana , sal e
-                                levain (fermento natural), cúrcuma e alecrim</p>
-                        </td>
-                        <td>R$ 22,00</td>
-                    </tr>
-                </table>
-                <table>
+                <table class="category_table">
                     <h2>Pizzas Veganas/ sem lactose</h2>
                     <th></th>
                     <th>23 cm - 4 Fatias</th>
@@ -584,19 +565,7 @@
                         <td>R$ 63,00</td>
                     </tr>
                 </table>
-                <table>
-                    <h2>Sobremesa Funcional Vegana</h2>
-                    <th></th>
-                    <th>75 g</th>
-                    <tr>
-                        <td>Brownie Vegano e sem trigo. Contém açúcar<p class="td_p_components">Açúcar demerara,
-                                chocolate 70% sem leite, Farinha de Arroz, fécula de mandioca, cacau em pó, goma
-                                xantana, óleo de girassol.</p>
-                        </td>
-                        <td>R$ 8,50</td>
-                    </tr>
-                </table>
-                <table>
+                <table class="category_table">
                     <h2>Pizzas Doces Especiais</h2>
                     <th></th>
                     <th>23 cm - 4 Fatias</th>
@@ -673,7 +642,7 @@
                         <td>R$ 63,00</td>
                     </tr>
                 </table>
-                <table>
+                <table class="category_table">
                     <h2>Calzones</h2>
                     <th></th>
                     <th>Individual</th>
@@ -700,7 +669,7 @@
                         <td>R$ 34,00</td>
                     </tr>
                 </table>
-                <table>
+                <table class="category_table">
                     <h2>Pizzas Low Carb</h2>
                     <th></th>
                     <th>28 cm - 6 fatias</th>
@@ -747,14 +716,39 @@
                         <td>R$ 60,00</td>
                     </tr>
                 </table>
-                <table>
-                    <h2>Maionese Caseira</h2>
+                <table class="category_table">
+                    <h2>Maionese e Bordas</h2>
                     <th></th>
-                    <th>30g</th>
+                    <th></th>
                     <tr>
                         <td>Maionese Caseira Tradicional<p class="td_p_components"></p>
                         </td>
                         <td>R$ 1,00</td>
+                    </tr>
+                    <tr>
+                        <td>Borda recheada de catupiry<p class="td_p_components"></p>
+                        </td>
+                        <td>R$ 7,00</td>
+                    </tr>
+                    <tr>
+                        <td>Borda recheada de cheddar<p class="td_p_components"></p>
+                        </td>
+                        <td>R$ 7,00</td>
+                    </tr>
+                    <tr>
+                        <td>Borda recheada de cheam cheese<p class="td_p_components"></p>
+                        </td>
+                        <td>R$ 10,00</td>
+                    </tr>
+                    <tr>
+                        <td>Borda recheada de chocolate<p class="td_p_components"></p>
+                        </td>
+                        <td>R$ 7,00</td>
+                    </tr>
+                    <tr>
+                        <td>Borda recheada de doce de leite<p class="td_p_components"></p>
+                        </td>
+                        <td>R$ 7,00</td>
                     </tr>
                     <tr>
                         <td>Maionese Caseira Defumada<p class="td_p_components"></p>
@@ -767,153 +761,7 @@
                         <td>R$ 1,00</td>
                     </tr>
                 </table>
-                <table>
-                    <h2>Pães Funcionais sem trigo, Veganos e fermentação natural</h2>
-                    <th></th>
-                    <th>aprox 75 gramas</th>
-                    <th>aprox 160 gramas</th>
-                    <th>aprox 60 gramas</th>
-                    <th>143 g</th>
-                    <th>aprox 290 g</th>
-                    <tr>
-                        <td>Mini pão Rústico de milho - Vegano e sem trigo<p class="td_p_components">Farinha de Arroz
-                                integral, fubá de milho, fécula de batata, Fécula de mandioca, açúcar demerara,
-                                psyllium, goma xantana, azeite extra virgem, sal e levain (fermento natural).</p>
-                        </td>
-                        <td>R$ 4,00</td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
-                    </tr>
-                    <tr>
-                        <td>Mini pão rústico de batata doce roxa - Vegano e sem trigo<p class="td_p_components">Farinha
-                                de Arroz integral, fécula de batata, Fécula de mandioca, purê de batata doce roxa,
-                                açúcar demerara, psyllium, goma xantana, sal e levain (fermento natural).</p>
-                        </td>
-                        <td>R$ 4,00</td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
-                    </tr>
-                    <tr>
-                        <td>Mini pão rústico de abóbora - Vegano e sem trigo<p class="td_p_components">Farinha de Arroz
-                                integral, fécula de batata, Fécula de mandioca, purê de abóbora, açúcar demerara,
-                                psyllium, goma xantana, sal e levain (fermento natural).</p>
-                        </td>
-                        <td>R$ 4,00</td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
-                    </tr>
-                    <tr>
-                        <td>Bisnaguinha funcional de cenoura<p class="td_p_components">Farinha de Arroz integral, fécula
-                                de batata, Fécula de mandioca, purê de cenoura, açúcar demerara, psyllium, goma xantana,
-                                sal e levain (fermento natural).</p>
-                        </td>
-                        <td>R$ 4,00</td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
-                    </tr>
-                    <tr>
-                        <td>Pão Australiano Funcional Vegano<p class="td_p_components">Farinha de Arroz integral, fécula
-                                de batata, Fécula de mandioca, sal, açúcar mascavo e demerara orgânico, cacau alcalino,
-                                manteiga de coco, goma xantana, psyllium, levain (fermento natural), fubá e canela em
-                                pó.</p>
-                        </td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>R$ 16,00</td>
-                        <td>---</td>
-                    </tr>
-                    <tr>
-                        <td>Pão Francês Funcional massa branca<p class="td_p_components">Farinha de Arroz, Farinha de
-                                Arroz integral, fécula de batata, Fécula de mandioca, açúcar demerara orgânico,
-                                psyllium, goma xantana, sal, azeite extra virgem, óleo de girassol e levain (fermento
-                                natural) . finalizado com gergelim.</p>
-                        </td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>R$ 4,00</td>
-                        <td>---</td>
-                        <td>---</td>
-                    </tr>
-                    <tr>
-                        <td>Pão Francês Funcional Integral<p class="td_p_components">Farinha de Arroz integral, fécula
-                                de batata, Fécula de mandioca, açúcar demerara orgânico, psyllium, goma xantana, sal,
-                                azeite extra virgem, óleo de girassol e levain (fermento natural) . finalizado com
-                                gergelim.</p>
-                        </td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>R$ 4,00</td>
-                        <td>---</td>
-                        <td>---</td>
-                    </tr>
-                    <tr>
-                        <td>Pão rústico de batata doce roxa Médio<p class="td_p_components">Vegano e sem trigo Farinha
-                                de Arroz integral, fécula de batata, Fécula de mandioca, purê de batata doce roxa,
-                                açúcar demerara, psyllium, goma xantana, sal e levain (fermento natur</p>
-                        </td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>R$ 15,00</td>
-                    </tr>
-                    <tr>
-                        <td>Pão rústico de carvão ativado médio<p class="td_p_components">Farinha de Arroz integral,
-                                fécula de batata, Fécula de mandioca, açúcar demerara orgânico, psyllium, goma xantana,
-                                sal, azeite extra virgem, óleo de girassol, carvão ativado e levain (fermento natural)
-                            </p>
-                        </td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>R$ 16,00</td>
-                    </tr>
-                    <tr>
-                        <td>Mini Bisnaga para sanduiche com farinha Teff<p class="td_p_components">Farinha de Arroz
-                                integral, farinha de Teff fécula de batata, Fécula de mandioca, açúcar demerara
-                                orgânico, psyllium, goma xantana, sal, azeite extra virgem, óleo de girassol e levain
-                                (fermento natural)aproximadamente 16 cm - 160 g</p>
-                        </td>
-                        <td>---</td>
-                        <td>R$ 8,50</td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
-                    </tr>
-                    <tr>
-                        <td>RÚSTICO ABOBORA MEDIO<p class="td_p_components">Farinha de Arroz integral, fécula de batata,
-                                Fécula de mandioca, purê de abóbora, açúcar demerara, psyllium, goma xantana, sal e
-                                levain (fermento natural).</p>
-                        </td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>R$ 15,00</td>
-                    </tr>
-                    <tr>
-                        <td>RÚSTICO CÚRCUMA E ALECRIM MÉDIO<p class="td_p_components">Farinha de Arroz integral, fécula
-                                de batata, Fécula de mandioca, açúcar demerara, psyllium, goma xantana, cúrcuma ,
-                                alecrim, sal e levain (fermento natural).</p>
-                        </td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>R$ 16,00</td>
-                    </tr>
-                </table>
-                <table>
+                <table class="category_table">
                     <h2>Cervejas Tradicionais</h2>
                     <th></th>
                     <th>Lata</th>
@@ -979,7 +827,7 @@
                         <td>R$ 15,00</td>
                     </tr>
                 </table>
-                <table>
+                <table class="category_table">
                     <h2>Cervejaria Áustria</h2>
                     <th></th>
                     <th>Garrafa</th>
@@ -1011,7 +859,7 @@
                         <td>R$ 17,00</td>
                     </tr>
                 </table>
-                <table>
+                <table class="category_table">
                     <h2>Bebidas</h2>
                     <th></th>
                     <th>350 ml</th>
@@ -1237,7 +1085,7 @@
                         <td>---</td>
                     </tr>
                 </table>
-                <table>
+                <table class="category_table">
                     <h2>Vinhos</h2>
                     <th></th>
                     <th>Garrafa</th>
@@ -1375,10 +1223,13 @@
             </div>
             <div class="infos">
                 <div class="left">
-                    <p class="address">R. Sábino José Ferreira, 719 - Carmo, Barbacena - MG, 36200-656</p>
-                    <p class="tel">3333-3333</p>
+                    <p class="address"><a target="_blank"
+                            href="https://www.google.com/maps/place/Pizzaria+Real/@-21.2400431,-43.7713267,17z/data=!3m1!4b1!4m5!3m4!1s0xa220224d5775af:0x1b7a604455f8de05!8m2!3d-21.2400409!4d-43.7691848">R.
+                            Sábino José Ferreira, 719 - Carmo, Barbacena - MG, 36200-656</a></p>
+                    <p class="tel">Tel: 3333-1791</p>
                 </div>
-                <span class="feitoPor">FEITO POR <a href="https://sandro-filho-dev.web.app/" target="_blank" style="color: #fc5214; ">SANDRO FILHO DEV</a> </span>
+                <span class="feitoPor">FEITO POR <a href="https://sandro-filho-dev.web.app/" target="_blank"
+                        style="color: #fc5214; ">SANDRO FILHO DEV</a> </span>
                 <div class="right">
                     <p class="instagram"><a target="_blank"
                             href="https://www.instagram.com/pizzariareal.bq/">pizzariareal.bq</a><img
@@ -1390,10 +1241,295 @@
         </div>
     </div>
 
-    <div onclick="handleBairros()" class="bairros_overlay"><div onclick="preventingDefault()" class="bairros_wrapper"><div class="close_overlay"><img src="assets/images/CloseSearch.svg"></div><h2>Taxas de Entrega</h2><table><tr><td>Água Santa</td><td>R$ 8,00</td></tr><tr><td>Andaraí</td><td>R$ 5,00</td></tr><tr><td>Belvedere</td><td>R$ 5,00</td></tr><tr><td>Boa Morte</td><td>R$ 5,00</td></tr><tr><td>Boa Vista</td><td>R$ 5,00</td></tr><tr><td>Bom Pastor</td><td>R$ 5,00</td></tr><tr><td>Caiçaras</td><td>R$ 6,00</td></tr><tr><td>Caminho Novo</td><td>R$ 5,00</td></tr><tr><td>Campo</td><td>R$ 5,00</td></tr><tr><td>Carmo</td><td>grátis</td></tr><tr><td>Centro</td><td>R$ 5,00</td></tr><tr><td>Chácaras das Andorinhas</td><td>R$ 5,00</td></tr><tr><td>Colônia Rodrigo Silva</td><td>R$ 10,00</td></tr><tr><td>Correia de Almeida - Centro</td><td>R$ 45,00</td></tr><tr><td>Diniz</td><td>R$ 5,00</td></tr><tr><td>Diniz II</td><td>R$ 5,00</td></tr><tr><td>Dom Bosco</td><td>R$ 5,00</td></tr><tr><td>Eucisa</td><td>R$ 6,00</td></tr><tr><td>Fátima</td><td>R$ 5,00</td></tr><tr><td>Floresta</td><td>R$ 6,00</td></tr><tr><td>Funcionários</td><td>R$ 5,00</td></tr><tr><td>Galego</td><td>R$ 16,00</td></tr><tr><td>Greenville</td><td>R$ 8,00</td></tr><tr><td>Grogotó</td><td>R$ 5,00</td></tr><tr><td>Guarani</td><td>R$ 7,00</td></tr><tr><td>Hospital Regional [SAMU]</td><td>R$ 7,00</td></tr><tr><td>Hotel Morada do Imperador</td><td>R$ 20,00</td></tr><tr><td>Ibiapaba</td><td>R$ 5,00</td></tr><tr><td>Ipanema</td><td>R$ 5,00</td></tr><tr><td>Jardim</td><td>R$ 5,00</td></tr><tr><td>João Paulo II</td><td>R$ 9,00</td></tr><tr><td>Mansões</td><td>R$ 5,00</td></tr><tr><td>Marino Ceolin</td><td>R$ 5,00</td></tr><tr><td>Monsenhor Mário Quintão</td><td>R$ 5,00</td></tr><tr><td>Monte Mário</td><td>R$ 5,00</td></tr><tr><td>Nossa Senhora Aparecida</td><td>R$ 5,00</td></tr><tr><td>Nova Suíça</td><td>R$ 7,00</td></tr><tr><td>Novo Horizonte</td><td>R$ 5,00</td></tr><tr><td>Padre Cunha</td><td>R$ 5,00</td></tr><tr><td>Panorama</td><td>R$ 5,00</td></tr><tr><td>Park Hotel Mantiqueira</td><td>R$ 18,00</td></tr><tr><td>Passarinhos</td><td>R$ 5,00</td></tr><tr><td>Ponte do Cosme</td><td>R$ 10,00</td></tr><tr><td>Ponte do Cosme - Vila Sofia</td><td>R$ 12,00</td></tr><tr><td>Pontilhão</td><td>R$ 5,00</td></tr><tr><td>Posto garanhão</td><td>R$ 12,00</td></tr><tr><td>Retiro das Rosas</td><td>R$ 8,00</td></tr><tr><td>Rivelli</td><td>R$ 6,00</td></tr><tr><td>Roman</td><td>R$ 10,00</td></tr><tr><td>Roselanche</td><td>R$ 15,00</td></tr><tr><td>Santa Cecília</td><td>R$ 5,00</td></tr><tr><td>Santa Efigênia</td><td>R$ 5,00</td></tr><tr><td>Santa Luzia</td><td>R$ 5,00</td></tr><tr><td>Santa Tereza I</td><td>R$ 5,00</td></tr><tr><td>Santa Tereza II</td><td>R$ 5,00</td></tr><tr><td>Santo Antônio</td><td>R$ 6,00</td></tr><tr><td>São Cristóvão</td><td>R$ 5,00</td></tr><tr><td>São Francisco</td><td>R$ 6,00</td></tr><tr><td>São Geraldo</td><td>R$ 5,00</td></tr><tr><td>São Jorge</td><td>R$ 5,00</td></tr><tr><td>São José</td><td>R$ 5,00</td></tr><tr><td>São Pedro</td><td>R$ 5,00</td></tr><tr><td>São Sebastião</td><td>R$ 5,00</td></tr><tr><td>São Vicente de Paula</td><td>R$ 6,00</td></tr><tr><td>Serra Verde</td><td>R$ 5,00</td></tr><tr><td>Vale das Rosas</td><td>R$ 6,00</td></tr><tr><td>Valentim Prenassi</td><td>R$ 5,00</td></tr><tr><td>Vilela</td><td>R$ 5,00</td></tr><tr><td>Vista Alegre</td><td>R$ 6,00</td></tr></table></div></div>
+    <div onclick="handleBairros()" class="bairros_overlay">
+        <div onclick="preventingDefault()" class="bairros_wrapper">
+            <div class="close_overlay"><img src="assets/images/CloseSearch.svg"></div>
+            <h2>Taxas de Entrega</h2>
+            <table>
+                <tr>
+                    <td>Água Santa</td>
+                    <td>R$ 8,00</td>
+                </tr>
+                <tr>
+                    <td>Andaraí</td>
+                    <td>R$ 5,00</td>
+                </tr>
+                <tr>
+                    <td>Belvedere</td>
+                    <td>R$ 5,00</td>
+                </tr>
+                <tr>
+                    <td>Boa Morte</td>
+                    <td>R$ 5,00</td>
+                </tr>
+                <tr>
+                    <td>Boa Vista</td>
+                    <td>R$ 5,00</td>
+                </tr>
+                <tr>
+                    <td>Bom Pastor</td>
+                    <td>R$ 5,00</td>
+                </tr>
+                <tr>
+                    <td>Caiçaras</td>
+                    <td>R$ 6,00</td>
+                </tr>
+                <tr>
+                    <td>Caminho Novo</td>
+                    <td>R$ 5,00</td>
+                </tr>
+                <tr>
+                    <td>Campo</td>
+                    <td>R$ 5,00</td>
+                </tr>
+                <tr>
+                    <td>Carmo</td>
+                    <td>grátis</td>
+                </tr>
+                <tr>
+                    <td>Centro</td>
+                    <td>R$ 5,00</td>
+                </tr>
+                <tr>
+                    <td>Chácaras das Andorinhas</td>
+                    <td>R$ 5,00</td>
+                </tr>
+                <tr>
+                    <td>Colônia Rodrigo Silva</td>
+                    <td>R$ 10,00</td>
+                </tr>
+                <tr>
+                    <td>Correia de Almeida - Centro</td>
+                    <td>R$ 45,00</td>
+                </tr>
+                <tr>
+                    <td>Diniz</td>
+                    <td>R$ 5,00</td>
+                </tr>
+                <tr>
+                    <td>Diniz II</td>
+                    <td>R$ 5,00</td>
+                </tr>
+                <tr>
+                    <td>Dom Bosco</td>
+                    <td>R$ 5,00</td>
+                </tr>
+                <tr>
+                    <td>Eucisa</td>
+                    <td>R$ 6,00</td>
+                </tr>
+                <tr>
+                    <td>Fátima</td>
+                    <td>R$ 5,00</td>
+                </tr>
+                <tr>
+                    <td>Floresta</td>
+                    <td>R$ 6,00</td>
+                </tr>
+                <tr>
+                    <td>Funcionários</td>
+                    <td>R$ 5,00</td>
+                </tr>
+                <tr>
+                    <td>Galego</td>
+                    <td>R$ 16,00</td>
+                </tr>
+                <tr>
+                    <td>Greenville</td>
+                    <td>R$ 8,00</td>
+                </tr>
+                <tr>
+                    <td>Grogotó</td>
+                    <td>R$ 5,00</td>
+                </tr>
+                <tr>
+                    <td>Guarani</td>
+                    <td>R$ 7,00</td>
+                </tr>
+                <tr>
+                    <td>Hospital Regional [SAMU]</td>
+                    <td>R$ 7,00</td>
+                </tr>
+                <tr>
+                    <td>Hotel Morada do Imperador</td>
+                    <td>R$ 20,00</td>
+                </tr>
+                <tr>
+                    <td>Ibiapaba</td>
+                    <td>R$ 5,00</td>
+                </tr>
+                <tr>
+                    <td>Ipanema</td>
+                    <td>R$ 5,00</td>
+                </tr>
+                <tr>
+                    <td>Jardim</td>
+                    <td>R$ 5,00</td>
+                </tr>
+                <tr>
+                    <td>João Paulo II</td>
+                    <td>R$ 9,00</td>
+                </tr>
+                <tr>
+                    <td>Mansões</td>
+                    <td>R$ 5,00</td>
+                </tr>
+                <tr>
+                    <td>Marino Ceolin</td>
+                    <td>R$ 5,00</td>
+                </tr>
+                <tr>
+                    <td>Monsenhor Mário Quintão</td>
+                    <td>R$ 5,00</td>
+                </tr>
+                <tr>
+                    <td>Monte Mário</td>
+                    <td>R$ 5,00</td>
+                </tr>
+                <tr>
+                    <td>Nossa Senhora Aparecida</td>
+                    <td>R$ 5,00</td>
+                </tr>
+                <tr>
+                    <td>Nova Suíça</td>
+                    <td>R$ 7,00</td>
+                </tr>
+                <tr>
+                    <td>Novo Horizonte</td>
+                    <td>R$ 5,00</td>
+                </tr>
+                <tr>
+                    <td>Padre Cunha</td>
+                    <td>R$ 5,00</td>
+                </tr>
+                <tr>
+                    <td>Panorama</td>
+                    <td>R$ 5,00</td>
+                </tr>
+                <tr>
+                    <td>Park Hotel Mantiqueira</td>
+                    <td>R$ 18,00</td>
+                </tr>
+                <tr>
+                    <td>Passarinhos</td>
+                    <td>R$ 5,00</td>
+                </tr>
+                <tr>
+                    <td>Ponte do Cosme</td>
+                    <td>R$ 10,00</td>
+                </tr>
+                <tr>
+                    <td>Ponte do Cosme - Vila Sofia</td>
+                    <td>R$ 12,00</td>
+                </tr>
+                <tr>
+                    <td>Pontilhão</td>
+                    <td>R$ 5,00</td>
+                </tr>
+                <tr>
+                    <td>Posto garanhão</td>
+                    <td>R$ 12,00</td>
+                </tr>
+                <tr>
+                    <td>Retiro das Rosas</td>
+                    <td>R$ 8,00</td>
+                </tr>
+                <tr>
+                    <td>Rivelli</td>
+                    <td>R$ 6,00</td>
+                </tr>
+                <tr>
+                    <td>Roman</td>
+                    <td>R$ 10,00</td>
+                </tr>
+                <tr>
+                    <td>Roselanche</td>
+                    <td>R$ 15,00</td>
+                </tr>
+                <tr>
+                    <td>Santa Cecília</td>
+                    <td>R$ 5,00</td>
+                </tr>
+                <tr>
+                    <td>Santa Efigênia</td>
+                    <td>R$ 5,00</td>
+                </tr>
+                <tr>
+                    <td>Santa Luzia</td>
+                    <td>R$ 5,00</td>
+                </tr>
+                <tr>
+                    <td>Santa Tereza I</td>
+                    <td>R$ 5,00</td>
+                </tr>
+                <tr>
+                    <td>Santa Tereza II</td>
+                    <td>R$ 5,00</td>
+                </tr>
+                <tr>
+                    <td>Santo Antônio</td>
+                    <td>R$ 6,00</td>
+                </tr>
+                <tr>
+                    <td>São Cristóvão</td>
+                    <td>R$ 5,00</td>
+                </tr>
+                <tr>
+                    <td>São Francisco</td>
+                    <td>R$ 6,00</td>
+                </tr>
+                <tr>
+                    <td>São Geraldo</td>
+                    <td>R$ 5,00</td>
+                </tr>
+                <tr>
+                    <td>São Jorge</td>
+                    <td>R$ 5,00</td>
+                </tr>
+                <tr>
+                    <td>São José</td>
+                    <td>R$ 5,00</td>
+                </tr>
+                <tr>
+                    <td>São Pedro</td>
+                    <td>R$ 5,00</td>
+                </tr>
+                <tr>
+                    <td>São Sebastião</td>
+                    <td>R$ 5,00</td>
+                </tr>
+                <tr>
+                    <td>São Vicente de Paula</td>
+                    <td>R$ 6,00</td>
+                </tr>
+                <tr>
+                    <td>Serra Verde</td>
+                    <td>R$ 5,00</td>
+                </tr>
+                <tr>
+                    <td>Vale das Rosas</td>
+                    <td>R$ 6,00</td>
+                </tr>
+                <tr>
+                    <td>Valentim Prenassi</td>
+                    <td>R$ 5,00</td>
+                </tr>
+                <tr>
+                    <td>Vilela</td>
+                    <td>R$ 5,00</td>
+                </tr>
+                <tr>
+                    <td>Vista Alegre</td>
+                    <td>R$ 6,00</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
 
 
     <script src="assets/main.js"></script>
+    <script src="assets/carrousel.js"></script>
 </body>
 
 </html>

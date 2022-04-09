@@ -25,6 +25,24 @@
     justify-content: space-around;
     transition: 0.3s all ease-in-out;
   }
+
+  .categoryIcon{
+    cursor: pointer;
+    width: 26px;
+    height: 26px;
+    background-color: #0f0f0fc2;
+    border: 1px solid #0f0f0f;
+    position: absolute;
+    bottom: -45px;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  .categoryIcon{
+    font-size: 26px;
+    color: white;
+
+  }
   
   .searchBarWrapper.active .searchBarIcon{
     background-color: #ffffffc2;
@@ -36,10 +54,7 @@
     background-color: transparent;
   } 
   
-  .searchBarWrapper.active .searchBarIcon img{
-    width: 65%;
-  }
-  
+
   .searchBarWrapper input{
     height: 93%;
     border-radius: 0px 2px 2px 0px;
