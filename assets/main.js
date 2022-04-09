@@ -11,7 +11,7 @@ const preventingDefault = (e) =>{
 
 
 const handleSearch = (e) =>{
-    console.log(e)
+
     var valor = e.value
     valor = valor.replaceAll(' ', 'wyx')
     var replace = `${valor}\\w`;
@@ -25,7 +25,7 @@ const handleSearch = (e) =>{
             td.closest('tr').style.display = 'none' 
             td.closest('tr').setAttribute("hide", "true")
         }else{
-            console.log(`\n\n${product_nome}   ${valor}`)
+        
             td.closest('tr').style.display = 'table-row' 
             td.closest('tr').setAttribute("hide", "false")
         }
@@ -48,7 +48,7 @@ const handleSearchIcon = () =>{
 
 document.querySelectorAll("option").forEach((option)=>{
     option.addEventListener("click", (e)=>{
-        console.log(e.value)
+    
     })
 })
 
@@ -65,7 +65,7 @@ document.querySelector(".wrapper_categories").addEventListener("click", (e)=>{
 
 document.querySelector(".overlayCategories").addEventListener("click", (e)=>{
     e.currentTarget.classList.remove("active")
-    console.log(e.currentTarget)
+
 })
 
 document.querySelector(".categoryIcon").addEventListener("click", (e)=>{
@@ -88,7 +88,7 @@ document.querySelectorAll(".overlayCategories .wrapper_categories .category_menu
         var index_scroll = Array.prototype.indexOf.call(parent.children, child);
         if(window.innerWidth <= 550){
             index_scroll = index_scroll - 5
-            console.log(index_scroll)
+        
 /*             switch (index_scroll){
                 case 5:
                     index_scroll = 0;
