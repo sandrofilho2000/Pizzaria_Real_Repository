@@ -75,6 +75,8 @@ document.querySelector(".categoryIcon").addEventListener("click", (e)=>{
 document.querySelectorAll(".overlayCategories .wrapper_categories .category_menu_single img, .overlayCategories .wrapper_categories .category_menu_single p").forEach((category_single, index)=>{
     category_single.addEventListener("click", (e)=>{
         var scroll_div = 0
+
+/*          */
         document.querySelectorAll(".cardapio_container table").forEach((table, index_table)=>{
             if(index_table > index){
                 scroll_div += table.offsetHeight
@@ -84,8 +86,44 @@ document.querySelectorAll(".overlayCategories .wrapper_categories .category_menu
         var child = e.currentTarget.closest('.owl-item')
         var parent = child.parentNode;
         var index_scroll = Array.prototype.indexOf.call(parent.children, child);
-        console.log()
-        document.querySelector(".overlayCategories").classList.remove("active")
+        if(window.innerWidth <= 550){
+            index_scroll = index_scroll - 5
+            console.log(index_scroll)
+/*             switch (index_scroll){
+                case 5:
+                    index_scroll = 0;
+                    break;
+                case 6:
+                    index_scroll = 1;
+                    break;
+                case 7:
+                    index_scroll = 2;
+                    break;
+                case 8:
+                    index_scroll = 3;
+                    break;
+                case 9:
+                    index_scroll = 4;
+                    break;
+                case 10:
+                    index_scroll = 5;
+                    break;
+                case 11:
+                    index_scroll = 6;
+                    break;
+                case 12:
+                    index_scroll = 7;
+                    break;
+                case 13:
+                    index_scroll = 8;
+                    break;
+                case 14:
+                    index_scroll = 9;
+                    break;
+            } */
+        }
+
+/*         document.querySelector(".overlayCategories").classList.remove("active") */
         document.getElementsByClassName("category_table")[index_scroll].scrollIntoView({behavior: "smooth", inline: "center"});
     })
 })
