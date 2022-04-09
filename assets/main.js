@@ -88,42 +88,9 @@ document.querySelectorAll(".overlayCategories .wrapper_categories .category_menu
         var index_scroll = Array.prototype.indexOf.call(parent.children, child);
         if(window.innerWidth <= 550){
             index_scroll = index_scroll - 5
-        
-/*             switch (index_scroll){
-                case 5:
-                    index_scroll = 0;
-                    break;
-                case 6:
-                    index_scroll = 1;
-                    break;
-                case 7:
-                    index_scroll = 2;
-                    break;
-                case 8:
-                    index_scroll = 3;
-                    break;
-                case 9:
-                    index_scroll = 4;
-                    break;
-                case 10:
-                    index_scroll = 5;
-                    break;
-                case 11:
-                    index_scroll = 6;
-                    break;
-                case 12:
-                    index_scroll = 7;
-                    break;
-                case 13:
-                    index_scroll = 8;
-                    break;
-                case 14:
-                    index_scroll = 9;
-                    break;
-            } */
         }
 
-/*         document.querySelector(".overlayCategories").classList.remove("active") */
+        document.querySelector(".overlayCategories").classList.remove("active")
         document.getElementsByClassName("category_table")[index_scroll].scrollIntoView({behavior: "smooth", inline: "center"});
     })
 })
